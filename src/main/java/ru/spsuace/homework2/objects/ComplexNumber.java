@@ -14,14 +14,16 @@ package ru.spsuace.homework2.objects;
 public class ComplexNumber {
     private final int dReal, dImaginary;
 
-    public ComplexNumber( int dReal,
-                          int dImaginary) {
+    public ComplexNumber(int dReal,
+                         int dImaginary) {
         this.dReal = dReal;
         this.dImaginary = dImaginary;
     }
+
     public int getReal() {
         return dReal;
     }
+
     public int getComplex() {
         return dImaginary;
     }
@@ -51,11 +53,8 @@ public class ComplexNumber {
             return this.dReal + " + " + this.dImaginary + "i";
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(new ComplexNumber(11, -24));
-    }
 }
+
 
 
 

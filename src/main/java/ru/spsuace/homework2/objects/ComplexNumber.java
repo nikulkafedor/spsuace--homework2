@@ -4,10 +4,18 @@ package ru.spsuace.homework2.objects;
  * Опишите иммутабельное комплексное число, с геттерами и методами toString()
  * Так же дополните класс методами, чтобы эти объекты можно было использовать в HashMap
  */
+
+/**
+ * 1) начинается с d, потому что в интернете первоначально в каком-то примере переменные так назывались
+ * 2) целые числа тоже по этой причине, надо сделать double?
+ * 3) каждая переменная на новой строке, запомнила.
+ */
+
 public class ComplexNumber {
     private final int dReal, dImaginary;
 
-    public ComplexNumber( int dReal, int dImaginary) {
+    public ComplexNumber( int dReal,
+                          int dImaginary) {
         this.dReal = dReal;
         this.dImaginary = dImaginary;
     }

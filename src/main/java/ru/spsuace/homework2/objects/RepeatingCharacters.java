@@ -9,10 +9,31 @@ import java.util.Objects;
  * Если строка пустая или null, то вернуть null
  * Пример abbasbdlbdbfklsssbb -> (s, 3)
  */
+
 public class RepeatingCharacters {
 
-    public static Pair<Character, Integer> getMaxRepeatingCharacters(String str) {
-        return null;
+    public static Pair < Character, Integer > getMaxRepeatingCharacters( String str ) {
+        if ( str == null||str.isEmpty() ) {
+            return null;
+        } else {
+            char max = str.charAt(0);
+            char maxFinal = str.charAt(0);
+            int maxQuantity = 1;
+            int maxSymbol = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (max == str.charAt(i)) {
+                    maxSymbol++;
+                } else {
+                    maxSymbol = 1;
+                    max = str.charAt(i);
+                    if (maxSymbol > maxQuantity) {
+                        maxQuantity = maxSymbol;
+                        maxFinal = max;
+                    }
+                }
+            }
+            return new Pair<>(maxFinal, maxQuantity);
+        }
     }
 
     public static class Pair<T, V> {
